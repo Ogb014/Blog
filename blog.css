@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background:grey;
+  }
+  h1 {
+    text-align: center;
+  }
+  .blog-form {
+    margin-bottom: 2rem;
+  }
+  .blog-form input, .blog-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .blog-form button {
+    padding: 10px 15px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .post {
+    background: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+  }
+  .post h3 {
+    margin: 0;
+  }
+  .post-actions {
+    margin-top: 10px;
+  }
+  .post-actions button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .edit {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+  .delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
