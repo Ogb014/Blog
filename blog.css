@@ -1,57 +1,198 @@
+
+  /* Reset some default styles */
+body, h1, input, textarea, button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Center the entire app */
 body {
-    font-family: Arial, sans-serif;
-    padding: 2rem;
-    background:grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  background-color: #f0f2f5;
+   gap: 15px;
+}
+
+.blog-form,
+#posts,
+h1,
+div > button {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Container styling */
+body > * {
+  background-color: #329299;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Blog form styling */
+.blog-form input,
+.blog-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.blog-form input:focus,
+.blog-form textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Button styling */
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Posts container */
+#posts {
+  background-color: #00274d;
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+#posts:hover {
+  transform: translateY(-5px);
+}
+
+/* Individual post */
+.post {
+  background-color: #003366;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Post actions */
+.post-actions {
+  display: flex;
+  gap: 8px; /* space between the buttons */
+  margin-top: 10px;
+}
+
+
+
+/* Shared small button styling */
+.post-actions button {
+  font-size: 12px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Edit button - blue */
+.post-actions .edit {
+  background-color: #007bff;
+}
+
+.post-actions .edit:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Delete button - red */
+.post-actions .delete {
+  background-color: #dc3545;
+}
+
+.post-actions .delete:hover {
+  background-color: #a71d2a;
+  transform: scale(1.05);
+}
+
+
+#posts {
+  background-color: #00274d;
+  color: #fff;
+  transition: transform 0.2s ease;
+  
+ 
+
+   flex-grow: 1;
+  min-height: 300px;
+  max-height: 70vh;  /* 70% of the viewport height */
+  overflow-y: auto;
+}
+
+
+
+/* Mobile responsiveness for screens 600px and below */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
+
   h1 {
+    font-size: 1.5rem;
     text-align: center;
   }
-  .blog-form {
-    margin-bottom: 2rem;
+
+  .blog-form input,
+  .blog-form textarea {
+    font-size: 14px;
+    padding: 8px;
   }
-  .blog-form input, .blog-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
   }
-  .blog-form button {
-    padding: 10px 15px;
-    border: none;
-    background: #28a745;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+
+  #posts {
+    max-height: 50vh;
+    overflow-y: auto;
+    font-size: 14px;
   }
+
   .post {
-    background: #fff;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    position: relative;
+    padding: 12px;
   }
-  .post h3 {
-    margin: 0;
-  }
+
   .post-actions {
-    margin-top: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 8px;
   }
+
   .post-actions button {
-    margin-right: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
+    font-size: 12px;
+    padding: 4px 8px;
   }
-  .edit {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-  }
-  .delete {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 3px;
-  }
+}
