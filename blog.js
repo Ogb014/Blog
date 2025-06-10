@@ -32,7 +32,7 @@ function addOrUpdatePost() {
   const file = imageInput.files[0]; // Get selected image
 
   if (file) {
-    // If there's an image, read it as Base64
+    // If there's an image, read it as Base64 that is a long text format of an image 
     const reader = new FileReader();
     reader.onload = function (event) {
       const imageBase64 = event.target.result;
@@ -69,10 +69,8 @@ function savePost(title, content, imageBase64) {
     posts.push(newPost);
   }
 
-  // Save posts to localStorage
+  // Save posts to localStorage and shows it 
   localStorage.setItem("BlogPost", JSON.stringify(posts));
-
-  // Re-render posts
   renderPosts();
 }
 
